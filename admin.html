@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Admin • ABDOUUU BANEL VIP</title><link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div class="admin-wrap">
+  <header class="admin-head"><div class="brand-mini"><img src="/logo.png"><div><b>ABDOUUU. BANEL. VIP</b><small>ADMIN PANEL</small></div></div><button id="logout" class="ghost">Logout</button></header>
+  <section id="loginBox" class="panel narrow"><h2>Admin Login</h2><input id="user" class="input" placeholder="Username"><input id="pass" class="input" type="password" placeholder="Password"><button id="adminLogin" class="primary">LOGIN</button><div id="adminMsg" class="msg"></div></section>
+  <section id="dash" hidden>
+    <div class="grid2">
+      <div class="panel"><h2>🔑 Create License Key</h2>
+        <label>Duration (Days)</label><select id="days" class="input"><option>1</option><option>7</option><option selected>30</option><option>90</option><option>365</option></select>
+        <label>Max Users / Devices</label><select id="users" class="input"><option>1</option><option selected>5</option><option>10</option><option>25</option><option>100</option></select>
+        <button id="generate" class="primary">⚙ Generate Key</button><div id="newKey" class="keybox"></div>
+      </div>
+      <div class="panel stats"><h2>Dashboard</h2><div><b id="total">0</b><span>Total Keys</span></div><div><b id="active">0</b><span>Active Keys</span></div></div>
+    </div>
+    <div class="panel"><div class="row"><h2>Generated Keys</h2><button id="refresh" class="ghost">Refresh</button></div>
+      <div class="table-wrap"><table><thead><tr><th>Key</th><th>Duration</th><th>Users</th><th>Status</th><th>Expiry</th><th>Actions</th></tr></thead><tbody id="rows"></tbody></table></div>
+    </div>
+  </section>
+</div>
+<script src="/admin.js"></script>
+</body></html>
